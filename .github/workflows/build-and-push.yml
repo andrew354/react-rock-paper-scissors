@@ -1,0 +1,30 @@
+name: Job - Build and push
+
+on:
+  workflow_call:
+    secrets:
+      HARBOR_USERNAME:
+        required: true
+        description: "Username for private Docker registry."
+      HARBOR_PASSWORD:
+        required: true
+        description: "Password for private Docker registry."
+
+jobs:
+  build_and_push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Login in private registry
+        uses: docker/login-action@v2
+        with:
+          registry: registry.dekaside.com
+          username: ${{ secrets.HARBOR_USERNAME }}
+          password: ${{ secrets.HARBOR_PASSWORD }}
+      - uses: actions/checkout@v3
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          file: ./compose/staging/Dockerfile
+          push: true
+          tags: registry.dekaside.com/mercuriax/mercuriax-frontend:latest

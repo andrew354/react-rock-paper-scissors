@@ -1,0 +1,7 @@
+name: Action - Pull request
+
+on: [pull_request]
+
+jobs:
+  lint_and_test:
+    uses: ./.github/workflows/lint-and-test.yml

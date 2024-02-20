@@ -1,0 +1,16 @@
+name: Job - Deploy staging
+
+on:
+  workflow_call:
+    secrets:
+      PORTAINER_HOOK_FRONTEND:
+        required: true
+        description: "Portainer webhook for Frontend service."
+
+jobs:
+  deploy_staging:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update Portainer frontend service to latest image
+        run: |
+          curl -X POST "${{ secrets.PORTAINER_HOOK_FRONTEND }}"
