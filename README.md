@@ -37,7 +37,7 @@ yarn dev
 yarn test
 ```
 
-### Advantages and disadvantages of your design.
+### Advantages and disadvantages of the design.
 
 - Given the requirements for the project I've set up a global provider for the entire application, called _GameProvider_. The provider essentially contains the state related to the _TotalScore_, and a setter function that allows to update the state.
   The main logic of the game is contained in a custom hook, called _useGameLogic_.
