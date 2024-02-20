@@ -1,5 +1,5 @@
 import PlayerBox from '../PlayerBox/PlayerBox'
-import { CHOICES, DEFAULT_CHOICES } from '../../hooks/useGameLogic'
+import { CHOICES, DEFAULT_CHOICES } from '../../../hooks/useGameLogic'
 import { IChoice } from '@/pages/landing/Landing'
 import { useGameContext } from '@/providers/GameProvider'
 

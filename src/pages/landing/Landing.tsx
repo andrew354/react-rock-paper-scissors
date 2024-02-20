@@ -1,6 +1,6 @@
 import Button from '@/components/Button/Button'
-import PlayersSection from '@/components/PlayersSelection/PlayersSelection'
-import ShowScore from '@/components/ShowScore/ShowScore'
+import PlayersSection from '@/features/gameLogic/PlayersSelection/PlayersSelection'
+import ShowScore from '@/features/gameLogic/ShowScore/ShowScore'
 import Title from '@/components/Title/Title'
 import { useGameLogic } from '@/hooks/useGameLogic'
 import { useTimer } from '@/hooks/useTimer'
