@@ -37,7 +37,9 @@ const Landing = () => {
         <ShowScore />
         {gameResult ? (
           <div className="flex justify-center">
-            Final Score: <strong>{gameResult}</strong>
+            <p className="text-center text-lg">
+              Final Score: <br /> <strong>{gameResult}</strong>
+            </p>
           </div>
         ) : (
           <div className="h-6"></div>

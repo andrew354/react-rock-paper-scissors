@@ -41,12 +41,12 @@ yarn test
 
 - Given the requirements for the project I've set up a global provider for the entire application, called _GameProvider_. The provider essentially contains the state related to the _TotalScore_, and a setter function that allows to update the state.
   The main logic of the game is contained in a custom hook, called _useGameLogic_.
-  Regarding the design pattern, I tried as much possible to separate those components that contain the actual logic from those components that are only use for representational porpuses. I've also used custom hooks to extract and isolate the core logic of the application.
+  Regarding the design pattern, I tried as much possible to separate those components that contain the actual logic from those components that are only use for representational purpuses. I've also used custom hooks to extract and isolate the core logic of the application.
   The main advantage in the design is that the majority of the components have little logic and are easy to test and to maintain.
   The main disadvantages is that it is not scalable and there is not the implication of a state management such as redux.
-  Moreover, it lack the implementation of a web server where to store the actual state, instead the information are kept in the localStorage to enhance the user experience and avoid to delete the TotalScore when refreshing the page.
+  Moreover, it lack the implementation of a web server and a databse where to store the actual state, instead the information are kept in the localStorage to enhance the user experience and avoid to delete the TotalScore when refreshing the page.
 
-  Over the last weekend I've created another repository and implement a full-stack approach for the same application, using Nextjs, GraphQl and MongoDb. I've choosen not to send this [repo](https://github.com/andrew354/rock-paper-scissors) since I did not include the test.
+  Over the last weekend I've created another repository and implement a full-stack approach for the same application, using Nextjs, GraphQl and MongoDb. I've decided not to send the [repo](https://github.com/andrew354/rock-paper-scissors) since I did not include the test.
 
 ## Structure of the project
 
