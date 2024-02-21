@@ -21,7 +21,7 @@ const PlayersSection = ({
   const { totalScore } = useGameContext()
 
   return (
-    <div className="flex gap-10 md:gap-20 items-center">
+    <div className="flex gap-0 md:gap-20 items-center">
       <div>
         <PlayerBox
           animate={runTimer ? true : false}
