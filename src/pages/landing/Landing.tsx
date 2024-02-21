@@ -42,7 +42,7 @@ const Landing = () => {
             </p>
           </div>
         ) : (
-          <div className="h-6"></div>
+          <div className="h-14"></div>
         )}
         <PlayersSection
           runTimer={runTimer}
